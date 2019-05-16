@@ -1,0 +1,10 @@
+{
+  "name": "AIC - Debugger",
+  "version": "1.0",
+  "description": "Akamai AIC debugger",
+	"permissions": [ "cookies","<all_urls>"],
+  "browser_action": {
+		"default_popup":"popup.html"
+	},
+  "manifest_version": 2
+}
