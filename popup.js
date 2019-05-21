@@ -39,9 +39,9 @@ chrome.cookies.get({
 var btn10 = document.getElementById('rtt10')
 btn10.addEventListener('click',function(){ setCookie('10') }, false)
 
-var btn100 = document.getElementById('rtt100')
-btn100.addEventListener('click',function(){ setCookie('150') }, false)
+var btn150 = document.getElementById('rtt150')
+btn150.addEventListener('click',function(){ setCookie('150') }, false)
 
-var btn400 = document.getElementById('rtt400')
-btn400.addEventListener('click',function(){ setCookie('500') }, false)
+var btn500 = document.getElementById('rtt500')
+btn500.addEventListener('click',function(){ setCookie('500') }, false)
 
