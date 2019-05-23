@@ -1,89 +1,89 @@
 <html>
 <head>
-	<style>
-		ul {
-			padding: 0;
-			list-style-type: none;
-		}
+  <style>
+    ul {
+      padding: 0;
+      list-style-type: none;
+    }
 
-		li {
-			cursor: pointer;
-		}
+    li {
+      cursor: pointer;
+    }
 
-		li:hover, li.active {
-			color: orange;
-		}
+    li:hover, li.active {
+      color: orange;
+    }
 
-		thead td {
-			background-color: #f90;
-			color: #fff;
-			padding: 5px 10px;
-			min-width: 100px;
-		}
-		
-		table td {
-			padding: 5px 10px;
-		}
+    thead td {
+      background-color: #f90;
+      color: #fff;
+      padding: 5px 10px;
+      min-width: 100px;
+    }
+    
+    table td {
+      padding: 5px 10px;
+    }
 
-		table td.group {
-			background-color: #4a86e8;
-			color: #fff;
-		}
+    table td.group {
+      background-color: #4a86e8;
+      color: #fff;
+    }
 
-		.right {
-			text-align: right;
-		}
-	</style>
+    .right {
+      text-align: right;
+    }
+  </style>
 
 </head>
 <body>
-	<ul>
-		<li id="rtt10">BOA</li>
-		<li id="rtt150">M&Eacute;DIA</li>
-		<li id="rtt500">RUIM</li>
-	</ul>
+  <ul>
+    <li id="rtt10">BOA</li>
+    <li id="rtt150">M&Eacute;DIA</li>
+    <li id="rtt500">RUIM</li>
+  </ul>
   <ul>
     <li id="clear">LIMPAR COOKIES</li>
   </ul>
 	<script src="popup.js"></script>
 
-	<table>
-		<thead>
-			<tr>
-				<td> Network </td>
-				<td> Condition </td>
-				<td> AIC RTT * </td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td rowspan="3" class="group"> Mobile Networks </td>
-				<td> Excellent </td>
-				<td class="right"> &lt; 150 ms </td>
-			</tr>
-			<tr>
-				<td> Good </td>
-				<td class="right"> &gt;= 150 ms </td>
-			</tr>
-			<tr>
-				<td> Poor </td>
-				<td class="right"> &gt;= 500 ms </td>
-			</tr>
-			<tr>
-				<td rowspan="3" class="group"> Non Mobile Networks </td>
-				<td> Excellent </td>
-				<td class="right"> &lt; 100 ms </td>
-			</tr>
-			<tr>
-				<td> Good </td>
-				<td class="right"> &gt;= 100 ms </td>
-			</tr>
-			<tr>
-				<td> Poor </td>
-				<td class="right"> &gt;= 375 ms </td>
-			</tr>
-		</tbody>
-	</table>
+  <table>
+    <thead>
+      <tr>
+        <td> Network </td>
+        <td> Condition </td>
+        <td> AIC RTT * </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="3" class="group"> Mobile Networks </td>
+        <td> Excellent </td>
+        <td class="right"> &lt; 150 ms </td>
+      </tr>
+      <tr>
+        <td> Good </td>
+        <td class="right"> &gt;= 150 ms </td>
+      </tr>
+      <tr>
+        <td> Poor </td>
+        <td class="right"> &gt;= 500 ms </td>
+      </tr>
+      <tr>
+        <td rowspan="3" class="group"> Non Mobile Networks </td>
+        <td> Excellent </td>
+        <td class="right"> &lt; 100 ms </td>
+      </tr>
+      <tr>
+        <td> Good </td>
+        <td class="right"> &gt;= 100 ms </td>
+      </tr>
+      <tr>
+        <td> Poor </td>
+        <td class="right"> &gt;= 375 ms </td>
+      </tr>
+    </tbody>
+  </table>
 
 </body>
 </html>
