@@ -1,19 +1,17 @@
 
-function setRttCookie(value, url, domain) {
-	chrome.cookies.set({
-		'url': url,
-		'name': 'aic-rtt',
-		'domain': domain,
-		'value': value
-	})
-}
+function configRttCookie(value, url, domain) {
+  const config = {
+    'url': url,
+    'name': 'aic-rtt'
+	}
 
-function setAkamaiCookie(value) {
-	setRttCookie(value, 'https://dafitistatic-a.akamaihd.net/', '.akamaihd.net')
-}
-
-function setDftStaticCookie(value) {
-	setRttCookie(value, 'https://t-static.dafiti.com.br/', '.dafiti.com.br')
+  if(value) {
+    config.value = value
+    config.domain = domain
+    chrome.cookies.set(config)
+  } else {
+    chrome.cookies.remove(config)
+  }
 }
 
 function setSelected(rtt) {
@@ -23,9 +21,21 @@ function setSelected(rtt) {
 }
 
 function setCookie(rtt) {
-	setDftStaticCookie(rtt)
-	setAkamaiCookie(rtt)
-	setSelected(rtt)
+  // TODO: pegar esses dados do localStorage, depois de fazer tela de configuração
+  const cookies = [
+    {
+      url: 'https://dafitistatic-a.akamaihd.net/',
+      domain: '.akamaihd.net'
+    },
+    {
+      url: 'https://t-static.dafiti.com.br/',
+      domain: '.dafiti.com.br'
+    }
+  ]
+
+  cookies.forEach(function(ck) {
+    configRttCookie(rtt, ck.url, ck.domain)
+  })
 }
 
 chrome.cookies.get({
@@ -45,3 +55,5 @@ btn150.addEventListener('click',function(){ setCookie('150') }, false)
 var btn500 = document.getElementById('rtt500')
 btn500.addEventListener('click',function(){ setCookie('500') }, false)
 
+var btnClear = document.getElementById('clear')
+btnClear.addEventListener('click', function(){ setCookie() }, false)
